@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<!-- /* Please find the answers to questions in comments*/ -->
+<head>
+	<!-- PART 2 OF THE ASSIGNMENT? -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style2.css">
+
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+
+
+
+<style type="text/css"> 
+
+
+
+/*Q1:Make all unordered lists (tags) have square bullets and a purple background.*/
+ul {
+list-style-type: square;
+background-color: purple;
+}
+a.highlight:hover {
+  color: #ff0000;
+} /*Q4	Demonstrate pseudo class*/
+ p::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}/*Q4	Demonstrate pseudo element*/
+/*Q9: Scrolling texts*/
+.scroll {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.scroll h3 {
+ font-size: 3em;
+ color: limegreen;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+}
+
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); 
+ -webkit-transform: translateX(100%); 
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); 
+ -webkit-transform: translateX(-100%);
+ transform: translateX(-100%); 
+ }
+}
+/*Q10:Any one unique feature which was not included in lecture */
+ .p1 {
+        font-variant-numeric: oldstyle-nums;
+      }
+
+</style>
+<body>
+
+<h1>There were some questions left to be answered.</h1>
+<p>Here I fill them.</p>
+<p><a class="highlight" href="">NCP TUTORIAL</a></p>
+<p><a href="">NCP TEST</a></p>
+<p class="p1">12736323</p>
+<div class="scroll">
+<h3>I hope you are safe at home... </h3>
+</div>
+
+<ul>
+  <li>QUIZ</li>
+  <li>PROJECT</li>
+  <li>END SEM</li>
+</ul>
+
+</body>
+</html>

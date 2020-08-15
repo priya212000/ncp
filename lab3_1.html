@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Q7:  Usage of specific font style (include from google fonts) -->
+<link href='https://fonts.googleapis.com/css?family=Pangolin' rel='stylesheet'>
+
+<style>
+* {box-sizing: border-box}
+
+/* Please find the answers to questions in comments*/
+
+
+
+
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Pangolin;
+
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}/*Q9: Border properties on table.*/
+
+
+
+
+p.a {
+  font-style: italic;
+}
+
+p.b {
+  font-style: normal;
+} /*Q2:Make all other paragraphs in appear in italic type and one particular paragraph appear in bold type.*/
+
+
+.tablink {
+ 
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  
+  background-image: url('corona.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+
+.tablink:hover {
+  background-color: #777;
+}
+
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+
+div.signin {
+  position: absolute;
+  top: 100px;
+  right: 10%;
+  width: 50px;
+  height: 20px;
+  text-align: right;
+
+  float: right; /* Q5: Illustrate float and clear properrties*/ 
+  background-color: lightblue;  
+ 
+}
+
+div.signup {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  width: 50px;
+  height: 20px;
+  text-align: right;
+
+  float: right;   
+        background-color: lightblue;
+        background-image: url('corona.jpg');
+        opacity: 0.2
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;  
+ 
+}
+
+#Home {  background-image: url('corona.jpg');
+ background-blend-mode: lighten;
+ /*opacity: 0.4;*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;}
+#Item1 {  background-image: url('corona.jpg');
+  background-repeat: no-repeat;
+   background-blend-mode: lighten;
+   /*opacity: 0.4;*/
+  background-attachment: fixed;  
+  background-size: cover;}
+#Item2 {  background-image: url('corona.jpg');
+
+  background-repeat: no-repeat;
+  /*opacity: 0.4;*/
+  background-attachment: fixed;  
+  background-size: cover;}
+#signin {  background-image: url('corona.jpg');
+ background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  /*opacity: 0.4;*/
+  background-attachment: fixed;  
+  background-size: cover;}
+#Contact {  background-image: url('corona.jpg');
+  background-repeat: no-repeat; background-blend-mode: lighten;
+  background-attachment: fixed; 
+  opacity: 0.4;  /*Q3.  Change background to a light color */
+  background-size: cover;}
+#in {  background-image: url('corona.jpg');
+ background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  /*opacity: 0.4; */
+  background-size: cover;}
+  
+
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+input:: placeholder{
+colour: grey;}
+button:hover {
+  opacity: 1;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-image: url('corona.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover
+}
+
+td, th {
+  border: 1px  ;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: grey;
+}
+.tabla{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 20px;
+  height: 20px;
+
+
+
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+
+<button class="tablink" onclick="openPage('Home', this, 'red')"id="defaultOpen">HOME</button>
+<button class="tablink" onclick="openPage('Item1', this, 'green')" >NEWS</button>
+<button class="tablink" onclick="openPage('Item2', this, 'blue')">ABOUT</button>
+<button class="tablink" onclick="openPage('Contact', this, 'orange')">CONTACT</button>
+
+<div id="Home" class="tabcontent">
+<div>
+ <CENTER><h1 style="font-family:verdana;">GO CORONA, CORONA GO!</h1></CENTER> 
+ 
+</div>
+  <p class="a">This site helps in getting all the information up to date about the worldwide situation of the global pandemic caused by the Covid-19.</p>
+</div>
+
+
+<div id="Item1" class="tabcontent">
+  <h3>News</h3>
+  <p class="b">Some news this fine day!</p> 
+
+</div>
+
+<div id="Item2" class="tabcontent">
+  <h3>Contact</h3>
+  <p class="a">Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>About</h3>
+  <p class="a">Who we are and what we do.</p>
+</div>
+<div class="signin" id="in">
+
+
+<form action="/action_page.php" method="post">
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username"  name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password"  name="psw" required>
+        
+    <button type="submit">Login</button>
+   
+  </div>
+
+
+</form>
+</div>
+<div class="signup" id="up">
+
+
+<form action="/action_page.php" method="post">
+
+  <div class="container">
+    <label for="name1"><b>Name</b></label>
+     <input type="text" placeholder="Enter name"  name="name1" required>
+     <label for="email"><b>Email Address:</b></label>
+  <input type="email" id="mail" placeholder="Enter email addr" name="mail">
+     <label for="birthday"><b>DOB:</b></label>
+  <input type="date" id="birthday" placeholder="Enter DOB" name="birthday">
+   <label for="name2"><b>Father's name</b></label>
+     <input type="text" placeholder="Enter fname"  name="name2" required>
+      <label for="name3"><b>Mother's name</b></label>
+     <input type="text" placeholder="Enter mname"  name="name3" required>
+    <label for="uname1"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username"  name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password"  name="psw" required>
+        
+    <button type="submit">UP</button>
+   
+  </div>
+
+
+</form>
+</div>
+
+<div class="tabla">
+
+<table class="hoverTable">
+  <tr>
+    <th>Country</th>
+    <th>Cases</th>
+    <th>Deaths</th>
+  </tr>
+  <tr >
+ <!-- Q6: Highlight the highest and lowest value in a given table with a different style specification -->
+    <td bgcolor="FF0000">USA</td>  
+    <td bgcolor="FF0000">5,095,748</td>
+    <td bgcolor="FF0000">164,104</td>
+  </tr>
+  <tr >
+    <td>Brazil</td>
+    <td>2,967,064</td>
+    <td>99,702 </td>
+  </tr>
+  <tr>
+    <td>India</td>
+    <td>2,089,773</td>
+    <td>42,602</td>
+  </tr>
+  <tr>
+    <td>Russia</td>
+    <td>877,135</td>
+    <td>14,725</td>
+  </tr>
+  <tr>
+    <td>South Africa</td>
+    <td>545,476</td>
+    <td>9,909 </td>
+  </tr>
+  <tr bgcolor="#FFFF00">
+    <td>Mexico</td>
+    <td>469,407</td>
+    <td>51,311</td>
+  </tr>
+</table>
+</div>
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+   
+</body>
+</html> 
