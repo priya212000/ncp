@@ -1,0 +1,172 @@
+
+<html>   
+   <head>
+      <title>Form Validation</title>      
+      <script type = "text/javascript">
+         <!--
+            // Form validation code will come here.
+         //-->
+      </script>      
+   </head>
+   
+   <body>
+      <form action = "/cgi-bin/test.cgi" name = "myForm" onsubmit = "return(validate());">
+         <table cellspacing = "2" cellpadding = "2" border = "1">
+            
+            <tr>
+               <td align = "right">Name</td>
+               <td><input type = "text" name = "Name" /></td>
+            </tr>
+            
+            
+            <tr>
+               <td align = "right">Email</td>
+               <td><input type = "text" name = "EMail" /></td>
+            </tr>
+             <tr>
+               <td align = "right">Father's Name</td>
+               <td><input type = "text" name = "fname" /></td>
+            </tr>
+             <tr>
+               <td align = "right">Mother's Name</td>
+               <td><input type = "text" name = "mname" /></td>
+            </tr>
+            
+       
+            
+            <tr>
+               <td align = "right">City</td>
+               <td>
+                  <select name = "Country">
+                     <option value = "-1" selected>[choose yours]</option>
+                     <option value = "1">CHENNAI</option>
+                     <option value = "2">BANGALORE</option>
+                     <option value = "3">MUMBAI</option>
+                  </select>
+               </td>
+            </tr>
+                 <tr>
+               <td align = "right">Pin Code</td>
+               <td><input type = "text" name = "Zip" /></td>
+            </tr>
+            <tr>
+               <td align ="right">Gender
+                  
+               </td>
+               <td>
+               <label for="s1">Male</label>
+            <input type="radio" id="1" name="yesno" value="1"/>
+            <br/>
+            <label for="s2">Female</label>
+            <input type="radio" id="1" name="yesno" value="2"/>
+         </td>
+
+          </tr> 
+           <tr>
+               <td align = "right">Username</td>
+               <td><input type = "text" name = "uname" /></td>
+            </tr>  
+              <tr>
+               <td align = "right">Password</td>
+               <td><input type = "password" name = "pwd" /></td>
+            </tr> 
+              <tr>
+               <td align = "right">Confirm Password</td>
+               <td><input type = "password" name = "cpwd" /></td>
+            </tr> 
+            
+            <tr>
+               <td align = "right"></td>
+               <td><input type = "submit" value = "Submit" /></td>
+            </tr>
+          
+            
+         </table>
+      </form>      
+   </body>
+</html>
+<script type = "text/javascript">
+   <!--
+      // Form validation code will come here.
+      function validate() {
+      
+         if( document.myForm.Name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+
+
+
+
+                 
+        var emailID = document.myForm.EMail.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter correct email ID")
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+              if( document.myForm.fname.value == "" ) {
+            alert( "Please provide your Father's name!" );
+            document.myForm.fname.focus() ;
+            return false;
+         }
+              if( document.myForm.mname.value == "" ) {
+            alert( "Please provide your Mother's name!" );
+            document.myForm.mname.focus() ;
+            return false;
+         }
+
+
+        
+
+
+       
+         if( document.myForm.Country.value == "-1" ) {
+            alert( "Please provide your city!" );
+            return false;
+         }
+         
+         if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
+            document.myForm.Zip.value.length != 6 ) {
+            
+            alert( "Please provide a pin in the format ######." );
+            document.myForm.Zip.focus() ;
+            return false;
+         }
+
+    var radios = document.getElementsByName("yesno");
+    var formValid = false;
+
+    var i = 0;
+    while (!formValid && i < radios.length) {
+        if (radios[i].checked) formValid = true;
+        i++;        
+    }
+
+    if (!formValid) alert("Must check some option!");
+    return formValid;
+
+var name=document.myForm.uname.value;  
+
+  
+if (name==null || name==""){  
+  alert("UserName can't be blank");  
+  return false;  
+}
+  
+
+if ((myForm.pwd.value)!=  (myForm.cpwd.value)) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        
+ }
+      
+   //-->
+</script>
+
+
